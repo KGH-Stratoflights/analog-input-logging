@@ -6,8 +6,8 @@ from adafruit_ads1x15.analog_in import AnalogIn
 
 
 i2c = busio.I2C(board.SCL, board.SDA)
-chan = AnalogIn(ads, ADS.P0)
 ads = ADS.ADS1115(i2c)
+chan = AnalogIn(ads, ADS.P0)
 while True:
     print(chan.value, chan.voltage)
     sleep(1)
